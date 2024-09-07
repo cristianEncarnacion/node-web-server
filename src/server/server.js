@@ -1,7 +1,11 @@
-const express = require("express");
-const path = require("path");
+// const express = require("express"); //Forma anterior de importar
+import express from "express"; //Forma actual de importar
 
-const startServer = (options) => {
+// const path = require("path"); //Forma anterior de importar
+import path from "path"; //Forma actual de importar
+
+//Forma actual de exportar
+export const startServer = (options) => {
   const { PORT, PUBLIC_PATH = "public" } = options;
   const app = express();
   //para poder usar middleware se usa la palabra use
@@ -22,6 +26,7 @@ const startServer = (options) => {
   });
 };
 
-module.exports = {
-  startServer,
-};
+//Esto se pone con la forma anterior de importar
+// module.exports = {
+//   startServer,
+// };
