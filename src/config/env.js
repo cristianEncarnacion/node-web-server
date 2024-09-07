@@ -1,11 +1,17 @@
-require("dotenv").config();
-const { get } = require("env-var");
+// require("dotenv").config(); //Forma anterior de importar
+import env from "dotenv"; //Forma actual de importar
+env.config(); //Forma actual de importar
 
-const envs = {
-  PORT: get("PORT").required().asPortNumber(),
-  PUBLIC_PATH: get("PUBLIC_PATH").default("public").asString(),
+// const { get } = require("env-var"); //Forma anterior de importar
+import envvar from "env-var"; //Forma actual de importar
+
+//Forma actual de exportar
+export const envs = {
+  PORT: envvar.get("PORT").required().asPortNumber(),
+  PUBLIC_PATH: envvar.get("PUBLIC_PATH").default("public").asString(),
 };
 
-module.exports = {
-  envs,
-};
+//Esto se pone con la forma anterior de importar
+// module.exports = {
+//   envs,
+// };
