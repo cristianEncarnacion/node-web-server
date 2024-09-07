@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Publica un post</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Escribe un post</h1>
+      <form id="postForm">
+        <input
+          type="text"
+          placeholder="Escribe el titulo"
+          id="titulo"
+          required
+        />
+        <input type="file" id="file" accept="image/*" required />
+        <textarea
+          id="postContent"
+          placeholder="Escribe tu contenido aquí..."
+          id="postContent"
+          required
+        ></textarea>
+        <button type="submit">Publicar</button>
+      </form>
+
+      <div id="postsContainer">
+        <h2>Publicaciones</h2>
+      </div>
+    </div>
+    <script src="code.js"></script>
+  </body>
+</html>
